@@ -15,6 +15,17 @@
 <header
 	class={['sticky top-0 z-40 border-b bg-base-100/95 backdrop-blur', scrolled ? 'border-base-300' : 'border-transparent']}
 >
+	<div class="bg-neutral text-neutral-content">
+		<div class="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-2 text-[0.7rem] leading-snug sm:flex-row sm:items-center sm:justify-between sm:text-xs md:px-6">
+			<p>{site.operations}</p>
+			<p class="flex flex-wrap gap-x-3">
+				<a class="underline-offset-2 hover:underline" href="mailto:{site.email}">Email: {site.email}</a>
+				<a class="underline-offset-2 hover:underline" href={site.whatsapp} target="_blank" rel="noopener noreferrer">
+					WA: {site.whatsappDisplay}
+				</a>
+			</p>
+		</div>
+	</div>
 	<div class="navbar mx-auto min-h-20 max-w-6xl px-4 md:px-6">
 		<div class="site-nav">
 			<label
@@ -26,16 +37,19 @@
 					<path d="M3 6h16M3 11h16M3 16h16" fill="none" stroke="currentColor" stroke-width="1.6" />
 				</svg>
 			</label>
-			<a href="#top" class="inline-flex min-w-0 shrink items-center" onclick={closeMenu}>
+			<a href="#top" class="inline-flex min-w-0 shrink flex-col justify-center" onclick={closeMenu}>
 				<img
 					src="/brand/logo.webp"
 					alt={site.name}
 					width="336"
 					height="114"
-					class="h-8 w-auto sm:h-12"
+					class="h-8 w-auto sm:h-10"
 				/>
+				<span class="mt-1 hidden max-w-64 text-[0.65rem] leading-tight tracking-wide text-base-content/70 lg:block">
+					{site.tagline}
+				</span>
 			</a>
-			<ul class="desktop-nav menu menu-horizontal mx-auto gap-1 px-1">
+			<ul class="desktop-nav menu menu-horizontal mx-auto gap-1 px-1 text-sm">
 				{#each nav as item (item.id)}
 					<li>
 						<a
@@ -48,9 +62,9 @@
 					</li>
 				{/each}
 			</ul>
-			<a href={site.whatsapp} class="nav-cta btn btn-sm sm:btn-md" target="_blank" rel="noopener noreferrer">
-				<span class="quote-short">Inquire</span>
-				<span class="quote-long">Request a Quote</span>
+			<a href="#contact" class="nav-cta btn btn-sm sm:btn-md">
+				<span class="quote-short">Request</span>
+				<span class="quote-long">Request Supply Allocation</span>
 			</a>
 		</div>
 	</div>

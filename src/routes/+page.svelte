@@ -69,13 +69,13 @@
 			<Hero />
 			<About />
 			<Products />
-			<Markets />
 			<Capabilities />
 			<Proof />
+			<Markets />
 			<Faq />
 			<Contact result={form?.quote ?? null} />
 		</main>
-		<Footer result={form?.newsletter ?? null} />
+		<Footer />
 	</div>
 	<div class="drawer-side">
 		<label for="nav-drawer" aria-label="Close menu" class="drawer-overlay"></label>
@@ -93,7 +93,7 @@
 				</li>
 			{/each}
 			<li class="mt-4">
-				<a href={site.whatsapp} class="btn btn-secondary" target="_blank" rel="noopener noreferrer" onclick={closeMenu}>Request a Quote</a>
+				<a href="#contact" class="btn btn-secondary" onclick={closeMenu}>Request Supply Allocation</a>
 			</li>
 		</ul>
 	</div>

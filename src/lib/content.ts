@@ -1,21 +1,24 @@
 export const site = {
 	name: 'PT Irene Bumi Sukapura',
-	publicUrl: 'https://irenebumisukapura.com',
-	title: 'Indonesian Commodity Exporter | PT Irene Bumi Sukapura',
+	publicUrl: 'https://bumisukapura.com',
+	title: 'Industrial Commodity Export | PT Irene Bumi Sukapura',
 	description:
-		'PT Irene Bumi Sukapura exports Indonesian coffee, spices, and coconut for B2B buyers. Documented lots, FOB CFR CIF terms, and L/C or T/T payment.',
-	email: 'export@irenebumisukapura.co.id',
-	whatsapp: 'https://wa.me/6281938473331',
-	whatsappDisplay: '+62 819-3847-3331',
-	linkedin: 'https://www.linkedin.com/company/irene-bumi-sukapura',
-	locality: 'Sukapura, Tasikmalaya',
-	region: 'West Java, Indonesia'
+		'PT Irene Bumi Sukapura processes and exports Indonesian industrial commodities from East Java, with container dispatch through the Port of Tanjung Perak.',
+	tagline: 'Industrial Commodity Processing & Export Supply',
+	operations: 'Operations Base: East Java, Indonesia | Export Gateway: Port of Tanjung Perak (IDTPE)',
+	summary:
+		'PT Irene Bumi Sukapura is an integrated Indonesian supply operator and production facility for global industrial buyers.',
+	email: 'info@bumisukapura.com',
+	whatsapp: 'https://wa.me/6285190978383',
+	whatsappDisplay: '+62 851-9097-8383',
+	locality: 'Probolinggo & Sidoarjo',
+	region: 'East Java, Indonesia'
 };
 
 export const nav = [
 	{ id: 'top', label: 'Home' },
-	{ id: 'about', label: 'About' },
-	{ id: 'products', label: 'Products' },
+	{ id: 'infrastructure', label: 'Infrastructure' },
+	{ id: 'products', label: 'Commodity Divisions' },
 	{ id: 'capabilities', label: 'Capabilities' },
 	{ id: 'contact', label: 'Contact' }
 ] as const;
@@ -24,140 +27,118 @@ export type Product = {
 	id: string;
 	name: string;
 	summary: string;
+	action: string;
+	href: string;
+	external: boolean;
 	image: string;
 	alt: string;
 	width: number;
 	height: number;
-	specs: { label: string; value: string }[];
+	mark?: boolean;
 };
 
 export const products: Product[] = [
 	{
-		id: 'arabica-coffee',
-		name: 'Coffee',
-		summary: 'Green or roasted coffee, named on the offer. The photograph is the roasted cup reference.',
+		id: 'plantation',
+		name: 'Agro & Plantation Commodities',
+		summary:
+			'Direct extraction from our managed highland estates and contracted cultivation zones. We supply Arabica and Robusta coffee, Cocoa Beans, raw Cashew Nuts, Areca Nuts, and bulk Tapioca Starch. Every lot is processed, hulled, and graded precisely to your requested defect limits and moisture thresholds in our regional facilities.',
+		action: 'Inquire Plantation Supply',
+		href: '#contact',
+		external: false,
 		image: '/media/coffee.webp',
 		alt: 'Roasted coffee beans filling the frame',
 		width: 960,
-		height: 732,
-		specs: [
-			{ label: 'Form', value: 'Green bean or roasted, stated on the proforma' },
-			{ label: 'Grade', value: 'Grade 1 target, screen agreed per contract' },
-			{ label: 'Moisture', value: '12% maximum on green bean' },
-			{ label: 'Packing', value: '60 kg GrainPro or jute, as contracted' },
-			{ label: 'Indicative HS', value: '0901.11 green / 0901.21 roasted' }
-		]
+		height: 732
 	},
 	{
-		id: 'whole-spices',
-		name: 'Whole spices',
-		summary: 'Pepper, clove, cinnamon, ginger, and turmeric as single items or a named mix.',
-		image: '/media/spices.webp',
-		alt: 'Pepper, cinnamon, clove, ginger, turmeric, and chili arranged on a table',
-		width: 960,
-		height: 640,
-		specs: [
-			{ label: 'Lead lot', value: 'Black pepper, ASTA or FAQ as contracted' },
-			{ label: 'Moisture', value: '12% maximum for pepper' },
-			{ label: 'Admixture', value: '1% maximum, unless the offer says otherwise' },
-			{ label: 'Packing', value: '25 kg poly-lined bag' },
-			{ label: 'Indicative HS', value: '0904.11 black pepper; other items per spice' }
-		]
-	},
-	{
-		id: 'coconut',
-		name: 'Coconut',
-		summary: 'Desiccated coconut from Indonesian origin, graded and packed for food manufacture.',
+		id: 'biomass',
+		name: 'Biomass & Coconut Derivatives',
+		summary:
+			'Industrial-scale manufacturing of coconut substrates (cocopeat), Desiccated Coconut, and Virgin Coconut Oil (VCO). For the renewable energy sector, we manage the bulk consolidation of Palm Kernel Shells (PKS), Wood Pellets, and Coconut Charcoal Briquettes. We configure washing, aging, and compression parameters to match commercial requirements.',
+		action: 'Inquire Biomass Supply',
+		href: '#contact',
+		external: false,
 		image: '/media/coconut.webp',
 		alt: 'Whole coconut beside two opened halves',
 		width: 960,
-		height: 640,
-		specs: [
-			{ label: 'Grade', value: 'Fine or medium, named on the offer' },
-			{ label: 'Fat', value: '65% minimum for high-fat desiccated' },
-			{ label: 'Moisture', value: '3% maximum' },
-			{ label: 'Packing', value: '25 kg carton with inner liner' },
-			{ label: 'Indicative HS', value: '0801.11' }
-		]
+		height: 640
 	},
 	{
-		id: 'dried-spice-blend',
-		name: 'Dried spice blend',
-		summary: 'A culinary blend for food manufacturers. The recipe is locked on the specification sheet before packing.',
-		image: '/media/ginger.webp',
-		alt: 'Dried spice blend with seeds, herbs, and chili on a white background',
+		id: 'botanicals',
+		name: 'Spices, Botanicals & Essential Oils',
+		summary:
+			'Bulk extraction and milling of premium Indonesian spices including Vanilla Beans, Nutmeg, Cardamom, Cloves, and Pepper. We also operate distillation supply lines for essential oils such as Patchouli and Citronella. All botanicals are mechanically sorted and extracted to achieve your mandated purity percentages.',
+		action: 'Inquire Botanical Supply',
+		href: '#contact',
+		external: false,
+		image: '/media/spices.webp',
+		alt: 'Pepper, cinnamon, clove, ginger, turmeric, and chili arranged on a table',
 		width: 960,
-		height: 960,
-		specs: [
-			{ label: 'Form', value: 'Dried mix, composition fixed per lot' },
-			{ label: 'Moisture', value: '10% maximum' },
-			{ label: 'Foreign matter', value: '0.5% maximum' },
-			{ label: 'Packing', value: '20 kg carton' },
-			{ label: 'Indicative HS', value: 'Classified to the contracted blend' }
-		]
+		height: 640
+	},
+	{
+		id: 'marine',
+		name: 'Marine & Natural Resins',
+		summary:
+			'Direct coastal and forestry extraction for industrial manufacturing. We supply dried Cottonii and Gracilaria Seaweed for global carrageenan extraction, alongside Damar Resin and Gum Copal for industrial coatings. Lots are processed and dehydrated to strict moisture controls before container stuffing.',
+		action: 'Inquire Marine & Resin Supply',
+		href: '#contact',
+		external: false,
+		image: '/media/warehouse.webp',
+		alt: 'Export cargo staged for dispatch',
+		width: 1100,
+		height: 734
+	},
+	{
+		id: 'custom',
+		name: 'Custom Production & Contract Supply',
+		summary:
+			'Require specific Indonesian raw materials not listed above? Submit your Target Specification Sheet. We configure our procurement network and regional processing hubs to fulfill your custom volume allocations under full export compliance.',
+		action: 'Consult Custom Supply (+62 851-9097-8383)',
+		href: 'https://wa.me/6285190978383',
+		external: true,
+		image: '/brand/mark.png',
+		alt: '',
+		width: 184,
+		height: 149,
+		mark: true
 	}
 ];
+
+export const infrastructure = [
+	{
+		title: 'Direct Cultivation & Extraction',
+		body: 'Active management of regional estates and formalized operational control over raw material extraction zones across the archipelago.'
+	},
+	{
+		title: 'In-House Processing',
+		body: 'Raw commodities bypass local spot markets and enter our regional facilities for mechanical sorting, washing, dehydration, and precise grading.'
+	},
+	{
+		title: 'Internal Logistics Division',
+		body: 'Container stuffing, palletizing, and export clearance are executed directly by our team at the Port of Tanjung Perak to ensure unbroken custody.'
+	}
+] as const;
 
 export const markets = [
 	{
 		id: 'jp',
 		code: 'JP',
 		name: 'Japan',
-		focus: 'Tight defect limits and lot samples that match the shipped container.'
+		focus: 'Zero-defect sorting thresholds and strict pesticide residue verification.'
 	},
 	{
 		id: 'kr',
 		code: 'KR',
 		name: 'South Korea',
-		focus: 'Food-grade packing and a certificate of origin ready for customs clearance.'
+		focus: 'Heavy metal and mycotoxin clearance complying with MFDS safety standards.'
 	},
 	{
-		id: 'sg',
-		code: 'SG',
-		name: 'Singapore',
-		focus: 'Regional distribution lots, including LCL for a first trial.'
-	},
-	{
-		id: 'my',
-		code: 'MY',
-		name: 'Malaysia',
-		focus: 'Short-haul FOB or CIF into Port Klang, with a simple document set.'
-	},
-	{
-		id: 'ae',
-		code: 'AE',
-		name: 'United Arab Emirates',
-		focus: 'Re-export buyers who need clean commercial invoices and stable packing.'
-	},
-	{
-		id: 'nl',
-		code: 'NL',
-		name: 'Netherlands',
-		focus: 'European food importers asking for analysis when the contract requires it.'
-	},
-	{
-		id: 'de',
-		code: 'DE',
-		name: 'Germany',
-		focus: 'Specification-led buying, with the grade written before the vessel is booked.'
-	},
-	{
-		id: 'us',
-		code: 'US',
-		name: 'United States',
-		focus: 'Prior notice and food-facility details handled against the buyer’s broker instructions.'
-	},
-	{
-		id: 'au',
-		code: 'AU',
-		name: 'Australia',
-		focus: 'Biosecurity-sensitive cargo, shipped only with the certificates the route requires.'
-	},
-	{
-		id: 'in',
-		code: 'IN',
-		name: 'India',
-		focus: 'Bulk spice and coconut inquiries quoted against a named discharge port.'
+		id: 'eu-us',
+		code: 'EU/US',
+		name: 'EU / US',
+		focus: 'EUDR compliance tracking, FDA facility protocols, and stringent Ochratoxin A (OTA) management.'
 	}
 ] as const;
 
@@ -166,122 +147,87 @@ export const steps = [
 		id: 'sourcing',
 		index: '01',
 		title: 'Sourcing',
-		summary: 'Buy against a written specification.',
-		detail:
-			'Suppliers are checked against the buyer’s grade, crop, and packing before lots are aggregated. A lot that cannot meet the sheet is not offered.'
+		summary: 'Direct harvest from managed highland estates and contracted cultivation zones.'
 	},
 	{
 		id: 'quality',
 		index: '02',
-		title: 'Quality',
-		summary: 'Sample the lot that will ship.',
-		detail:
-			'Moisture, defects, and foreign matter are checked at intake. Pre-shipment samples come from the contracted lot, not from a different season.'
+		title: 'Processing & Quality',
+		summary:
+			'Mechanical sorting, washing, drying, and batch-specific laboratory testing executed at our East Java facilities.'
 	},
 	{
 		id: 'packing',
 		index: '03',
 		title: 'Packing',
-		summary: 'Grade, pack, and mark the lot.',
-		detail:
-			'Cargo is packed for ocean freight. Lot numbers on the bags follow the packing list, so the receiver can tie a claim back to a specific unit.'
+		summary:
+			'Industrial packaging, including hermetic sealing, multi-ply craft bags, and high-density hydraulic compression.'
 	},
 	{
 		id: 'documents',
 		index: '04',
 		title: 'Documents',
-		summary: 'Build the export file with the cargo.',
-		detail:
-			'The commercial invoice, packing list, certificate of origin, and Indonesian export declaration (PEB) travel with the shipment. A phytosanitary certificate or certificate of analysis is added when the destination or the contract requires it.'
+		summary:
+			'Comprehensive export files built concurrently with cargo, including Phytosanitary, Surveyor Reports, and COO.'
 	},
 	{
 		id: 'shipping',
 		index: '05',
 		title: 'Shipping',
-		summary: 'Hand over at the agreed point.',
-		detail:
-			'Cargo is delivered to the load port under the named incoterm. FOB transfers at the vessel. CFR and CIF include ocean freight, and CIF includes insurance.'
+		summary: 'Direct container transfer and handover at the Port of Tanjung Perak (IDTPE).'
 	}
 ] as const;
-
-export const documents = [
-	'Commercial invoice',
-	'Packing list',
-	'Bill of lading',
-	'Certificate of origin (SKA)',
-	'Pemberitahuan Ekspor Barang (PEB)',
-	'Certificate of analysis, when contracted',
-	'Phytosanitary certificate, when the destination requires it',
-	'ISPM-15 mark for any wood packaging'
-];
 
 export const faqs = [
 	{
 		id: 'moq',
 		question: 'What is the minimum order?',
 		answer:
-			'Trial orders can start from one pallet when the commodity and the packing allow it. Program business is quoted in 20-foot and 40-foot containers. The quantity on the signed proforma is the binding minimum.'
+			'Trial orders commence at 1 pallet where applicable. Standard commercial programs are allocated in 20-foot and 40-foot containers (FCL).'
 	},
 	{
 		id: 'payment',
 		question: 'Which payment terms do you accept?',
 		answer:
-			'Telegraphic transfer (T/T) and irrevocable letters of credit at sight. The deposit, the balance, and the L/C conditions are written on the proforma before packing starts. We do not ship against an unsigned term.'
-	},
-	{
-		id: 'incoterms',
-		question: 'Which Incoterms do you offer?',
-		answer:
-			'FOB, CFR, and CIF are the standard offers. FCA is considered when the inland leg is clear. Every offer names the port. The Incoterm on the proforma is the one that governs the shipment.'
-	},
-	{
-		id: 'papers',
-		question: 'Which export documents come with the shipment?',
-		answer:
-			'Invoice, packing list, bill of lading, certificate of origin, and the Indonesian export declaration. Phytosanitary, fumigation, and analysis certificates are added when the buyer’s authority or the contract requires them.'
-	},
-	{
-		id: 'lead-time',
-		question: 'How long does a shipment take?',
-		answer:
-			'It depends on the commodity, the crop, and whether the lot is already in warehouse. The offer states a shipment window. There is no single lead time for every product.'
+			'We operate via secure bank-to-bank instruments: Irrevocable Letter of Credit (L/C) at sight or T/T with advance payment.'
 	},
 	{
 		id: 'samples',
 		question: 'Can we receive a sample before the contract?',
 		answer:
-			'Yes, when stock of that grade is available. The sample is drawn from the lot we intend to ship. A library sample from another season is labeled as such, and it is not treated as the contract quality.'
+			'Yes. Lab-verified production samples are dispatched internationally via courier prior to commercial contract signing.'
 	}
 ] as const;
 
-export const notes = [
+export const execution = [
 	{
-		id: 'rotterdam',
-		quote: 'The specification sheet matched the landed lot. That is why the second order was straightforward.',
-		role: 'Procurement lead, specialty foods',
-		place: 'Rotterdam'
+		title: 'Shipment size',
+		value: 'FCL / LCL',
+		desc: 'Palletized trials and Full Container Load stuffing controlled in-house.'
 	},
 	{
-		id: 'singapore',
-		quote: 'The invoice, packing list, and bill of lading arrived together, so the letter of credit stayed clean.',
-		role: 'Trade finance coordinator',
-		place: 'Singapore'
+		title: 'Incoterms',
+		value: 'FOB, CFR, CIF',
+		desc: 'Origin loading at Port of Tanjung Perak, Surabaya.'
 	},
 	{
-		id: 'osaka',
-		quote: 'We began with one pallet. The container that followed used the same grade and the same lot logic.',
-		role: 'Buyer, food manufacturing',
-		place: 'Osaka'
+		title: 'Payment',
+		value: 'L/C or T/T',
+		desc: 'Irrevocable Letter of Credit at Sight and Telegraphic Transfer accepted.'
+	},
+	{
+		title: 'Annual volume',
+		value: 'Contract Allocations',
+		desc: 'Quoted per commodity and crop year based on your requirement.'
 	}
 ] as const;
 
-export const incoterms = ['FOB', 'CFR', 'CIF', 'FCA'] as const;
+export const incoterms = ['FOB', 'CFR', 'CIF'] as const;
 
 export type QuoteValues = {
 	name: string;
 	company: string;
 	email: string;
-	country: string;
 	commodity: string;
 	incoterm: string;
 	message: string;

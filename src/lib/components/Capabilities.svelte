@@ -49,19 +49,19 @@
 	}
 </script>
 
-<section id="capabilities" class="px-6 pt-24 pb-8 lg:pt-32" aria-labelledby="capabilities-title">
+<section id="capabilities" class="bg-base-200 px-6 pt-24 pb-8 lg:pt-32" aria-labelledby="capabilities-title">
 	<div class="mx-auto max-w-6xl">
 		<p class="text-xs font-medium tracking-[0.22em] text-accent uppercase">Capabilities</p>
 		<h2 id="capabilities-title" class="font-display mt-4 max-w-2xl text-4xl text-balance md:text-5xl">
-			From the supplier’s gate to the ship’s rail.
+			Production to Port: Unbroken Custody.
 		</h2>
 		<p class="mt-5 max-w-2xl text-base-content/80">
-			The same lot number is meant to survive sourcing, packing, documents, and the port.
+			Every export lot is processed, tested, and containerized under our direct operational control.
 		</p>
 	</div>
 </section>
 
-<div class="cap-track px-6" style:--steps={steps.length} {@attach track}>
+<div class="cap-track bg-base-200 px-6" style:--steps={steps.length} {@attach track}>
 	<div class="cap-pin mx-auto grid w-full max-w-6xl items-start gap-10 lg:items-center lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-16">
 		<ol class="m-0 list-none p-0">
 			{#each steps as step, index (step.id)}
@@ -105,8 +105,7 @@
 				<div class="cap-detail">
 					<p class="text-xs font-medium tracking-[0.18em] text-secondary uppercase">{active.index}</p>
 					<h3 class="font-display mt-3 text-3xl">{active.title}</h3>
-					<p class="mt-3 text-neutral-content/75">{active.summary}</p>
-					<p class="mt-4 leading-relaxed text-neutral-content/85">{active.detail}</p>
+					<p class="mt-4 leading-relaxed text-neutral-content/85">{active.summary}</p>
 				</div>
 			{/key}
 		</div>
@@ -129,8 +128,8 @@
 
 		.cap-pin {
 			position: sticky;
-			top: 5rem;
-			min-height: calc(100svh - 5rem);
+			top: 8rem;
+			min-height: calc(100svh - 8rem);
 		}
 	}
 

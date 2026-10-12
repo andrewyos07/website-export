@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
-	import { incoterms, products, site, type QuoteResult } from '#lib/content.ts';
+	import { incoterms, products, type QuoteResult } from '#lib/content.ts';
 
 	let { result }: { result: QuoteResult | null } = $props();
 	let pending = $state(false);
@@ -12,11 +12,11 @@
 		<div>
 			<p class="text-xs font-medium tracking-[0.22em] text-secondary uppercase">Contact</p>
 			<h2 id="contact-title" class="font-display mt-4 text-4xl text-balance md:text-5xl">
-				Send the commodity, the port, and the quantity.
+				Secure Your Production Allocation.
 			</h2>
 			<p class="mt-6 leading-relaxed text-neutral-content/80">
-				A useful inquiry names the product, the Incoterm, the discharge port, and whether you need a
-				trial pallet or a container. We reply with a specification and a proforma, not a brochure.
+				Submit your Target Specification Sheet (commodity type, required grading, moisture limits, and
+				volume). Our operations desk will issue a formal Supply Contract and production timeline.
 			</p>
 		</div>
 
@@ -34,7 +34,7 @@
 		>
 			{#if result?.success}
 				<div role="status" class="alert alert-success alert-soft mb-5">
-					<span>The form is valid. This preview does not deliver email yet — connect a mailbox before launch.</span>
+					<span>The form is valid. It does not send email yet, so also write to the operations desk if you need a reply now.</span>
 				</div>
 			{/if}
 			{#if result?.error}
@@ -65,7 +65,7 @@
 					/>
 				</div>
 				<div>
-					<label class="label" for="quote-email">Work email</label>
+					<label class="label" for="quote-email">Email</label>
 					<input
 						id="quote-email"
 						class="input w-full"
@@ -74,17 +74,6 @@
 						autocomplete="email"
 						required
 						value={values?.email ?? ''}
-					/>
-				</div>
-				<div>
-					<label class="label" for="quote-country">Country</label>
-					<input
-						id="quote-country"
-						class="input w-full"
-						name="country"
-						autocomplete="country-name"
-						required
-						value={values?.country ?? ''}
 					/>
 				</div>
 				<div>
@@ -116,10 +105,9 @@
 					placeholder="Quantity, load or discharge port, and any grade you already buy."
 					aria-describedby={result?.error ? 'quote-error' : undefined}>{values?.message ?? ''}</textarea>
 			</div>
-			<a class="btn btn-neutral mt-5" href={site.whatsapp} target="_blank" rel="noopener noreferrer">
-				Inquire Now
-				<span class="sr-only">, opens WhatsApp</span>
-			</a>
+			<button class="btn btn-neutral mt-5" type="submit" disabled={pending} aria-busy={pending}>
+				{pending ? 'Sending' : 'Transmit Inquiry'}
+			</button>
 		</form>
 	</div>
 </section>

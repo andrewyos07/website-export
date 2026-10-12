@@ -12,7 +12,7 @@
 	<div class="rise-view">
 		<p class="text-xs font-medium tracking-[0.22em] text-accent uppercase">Questions</p>
 		<h2 id="faq-title" class="font-display mt-4 text-4xl text-balance md:text-5xl">
-			Quantity, payment, and the terms on the offer.
+			Standard Supply Terms.
 		</h2>
 		<div class="faq-accordion mt-10 flex flex-col gap-3">
 			{#each faqs as faq (faq.id)}

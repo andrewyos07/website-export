@@ -31,17 +31,16 @@ export const actions = {
 			name: read(data, 'name'),
 			company: read(data, 'company'),
 			email: read(data, 'email'),
-			country: read(data, 'country'),
 			commodity: read(data, 'commodity'),
 			incoterm: read(data, 'incoterm'),
 			message: read(data, 'message')
 		};
 
-		if (!values.name || !values.company || !values.country || !values.message || !emailPattern.test(values.email)) {
+		if (!values.name || !values.company || !values.message || !emailPattern.test(values.email)) {
 			return fail(400, {
 				quote: {
 					values,
-					error: 'Name, company, country, a valid work email, and a shipment brief are required.'
+					error: 'Name, company, a valid email, and a shipment brief are required.'
 				}
 			});
 		}

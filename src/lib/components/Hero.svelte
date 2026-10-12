@@ -1,21 +1,18 @@
-<script lang="ts">
-	import { site } from '#lib/content.ts';
-</script>
-
 <section id="top" class="hero min-h-[calc(100svh-5rem)] bg-base-100">
 	<div class="hero-content hero-split px-6 py-16 lg:py-28">
 		<div class="hero-copy w-full min-w-0 max-w-xl">
-			<p class="text-xs font-medium tracking-[0.22em] text-accent uppercase">Indonesia to global buyers</p>
+			<p class="text-xs font-medium tracking-[0.22em] text-accent uppercase">Vertically integrated Indonesian commodity supply</p>
 			<h1 class="font-display mt-5 max-w-full text-4xl leading-tight text-base-content sm:text-5xl lg:text-6xl">
-				Quality commodities from Indonesia, shipped across the world.
+				Industrial Commodity Production & Global Export Supply.
 			</h1>
 			<p class="mt-6 text-lg leading-relaxed text-base-content/80">
-				PT Irene Bumi Sukapura prepares export lots for importers who need a written specification, a
-				complete document file, and a handover they can trace from origin to port.
+				PT Irene Bumi Sukapura operates an integrated physical supply network across Indonesia. We govern
+				the supply chain from raw material extraction to containerized port dispatch, delivering bulk
+				commodities tailored to your exact laboratory specifications and global destination standards.
 			</p>
 			<div class="mt-8 flex flex-col gap-3 sm:flex-row">
-				<a href={site.whatsapp} class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">Inquire Now</a>
-				<a href="#products" class="btn btn-lg">View products</a>
+				<a href="#contact" class="btn btn-primary btn-lg">Inquire Supply Allocation</a>
+				<a href="#products" class="btn btn-lg">View Commodity Divisions</a>
 			</div>
 		</div>
 		<figure class="relative w-full min-w-0 max-w-xl">

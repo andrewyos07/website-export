@@ -11,11 +11,10 @@ const schema = {
 			logo: `${site.publicUrl}/brand/logo.webp`,
 			address: {
 				'@type': 'PostalAddress',
-				addressLocality: 'Tasikmalaya',
-				addressRegion: 'West Java',
+				addressLocality: 'Probolinggo and Sidoarjo',
+				addressRegion: 'East Java',
 				addressCountry: 'ID'
-			},
-			sameAs: [site.linkedin]
+			}
 		},
 		{
 			'@type': 'WebSite',
