@@ -4,6 +4,7 @@
 	import Capabilities from '#lib/components/Capabilities.svelte';
 	import Contact from '#lib/components/Contact.svelte';
 	import Faq from '#lib/components/Faq.svelte';
+	import Gallery from '#lib/components/Gallery.svelte';
 	import Footer from '#lib/components/Footer.svelte';
 	import Header from '#lib/components/Header.svelte';
 	import Hero from '#lib/components/Hero.svelte';
@@ -60,6 +61,7 @@
 			<Hero />
 			<About />
 			<Products />
+			<Gallery />
 			<Capabilities />
 			<Faq />
 			<Contact result={form?.quote ?? null} />

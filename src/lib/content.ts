@@ -57,8 +57,8 @@ export const products: Product[] = [
 			'Moisture Range: 11% - 12.5%'
 		],
 		action: 'Request Coffee Catalog',
-		href: '#contact',
-		external: false,
+		href: site.whatsapp,
+		external: true,
 		image: '/media/coffee-beds.jpg',
 		alt: 'Coffee cherries drying on raised beds',
 		width: 1200,
@@ -77,8 +77,8 @@ export const products: Product[] = [
 			'Expansion: 70 - 80 Liters per block'
 		],
 		action: 'Request Substrate Specs',
-		href: '#contact',
-		external: false,
+		href: site.whatsapp,
+		external: true,
 		image: '/media/coconut-bales.jpg',
 		alt: 'Compressed coconut coir bales stacked for shipment',
 		width: 1280,
@@ -96,8 +96,8 @@ export const products: Product[] = [
 			'Moisture: Strict drying controls (Max 10-12% for dried spices)'
 		],
 		action: 'Request Spices Spec Sheet',
-		href: '#contact',
-		external: false,
+		href: site.whatsapp,
+		external: true,
 		image: '/media/spices.webp',
 		alt: 'Pepper, cinnamon, clove, ginger, turmeric, and chili arranged on a table',
 		width: 960,
@@ -115,13 +115,13 @@ export const products: Product[] = [
 			'Packaging: 10kg - 20kg Export Mesh Bags'
 		],
 		action: 'Request Fresh Produce Quote',
-		href: '#contact',
-		external: false,
+		href: site.whatsapp,
+		external: true,
 		image: '/media/shallot-drying.jpg',
 		alt: 'Shallots drying on raised bamboo racks',
 		width: 960,
 		height: 1280,
-		focus: 'center 68%'
+		focus: 'center bottom'
 	},
 	{
 		id: 'custom',
@@ -129,8 +129,8 @@ export const products: Product[] = [
 		summary:
 			'Require specific Indonesian raw materials not listed above? Submit your Target Specification Sheet. From essential oils to industrial biomass, we can source, verify, and consolidate your cargo through our established network.',
 		action: 'Consult Custom Supply',
-		href: '#contact',
-		external: false,
+		href: site.whatsapp,
+		external: true,
 		image: '/brand/mark.png',
 		alt: '',
 		width: 184,
@@ -138,6 +138,102 @@ export const products: Product[] = [
 		mark: true
 	}
 ];
+
+export const highlights = [
+	{
+		id: 'coffee',
+		name: 'Coffee',
+		action: 'Request Coffee Catalog',
+		photos: [
+			{
+				src: '/media/coffee-beds.jpg',
+				alt: 'Coffee cherries drying on raised beds',
+				caption: 'Cherries drying on raised beds.',
+				width: 1200,
+				height: 1600,
+				focus: 'center 42%'
+			},
+			{
+				src: '/media/coffee-greenhouse.jpg',
+				alt: 'Coffee cherries drying on tiered racks inside a greenhouse',
+				caption: 'Greenhouse drying before moisture is checked.',
+				width: 1498,
+				height: 842,
+				focus: 'center'
+			},
+			{
+				src: '/media/coffee-seedlings.jpg',
+				alt: 'Coffee seedlings ready for planting',
+				caption: 'Seedlings at a cultivation plot.',
+				width: 1280,
+				height: 748,
+				focus: 'center'
+			}
+		]
+	},
+	{
+		id: 'cocopeat',
+		name: 'Cocopeat',
+		action: 'Request Substrate Specs',
+		photos: [
+			{
+				src: '/media/coconut-shells.jpg',
+				alt: 'Coconut shells piled at a processing yard',
+				caption: 'Shells at the yard before fiber is separated.',
+				width: 960,
+				height: 1280,
+				focus: 'center'
+			},
+			{
+				src: '/media/coconut-coir.jpg',
+				alt: 'Coconut coir piled under a processing shed',
+				caption: 'Coir staged for substrate processing.',
+				width: 960,
+				height: 1280,
+				focus: 'center 72%'
+			},
+			{
+				src: '/media/coconut-bales.jpg',
+				alt: 'Compressed coconut coir bales stacked for shipment',
+				caption: 'Compressed bales ready for export.',
+				width: 1280,
+				height: 634,
+				focus: 'center'
+			}
+		]
+	},
+	{
+		id: 'produce',
+		name: 'Fresh shallots',
+		action: 'Request Fresh Produce Quote',
+		photos: [
+			{
+				src: '/media/shallot-drying.jpg',
+				alt: 'Shallots drying on raised bamboo racks',
+				caption: 'Curing on raised racks.',
+				width: 960,
+				height: 1280,
+				focus: 'center bottom'
+			},
+			{
+				src: '/media/shallot-weighing.jpg',
+				alt: 'Workers weighing a shallot harvest beside the field',
+				caption: 'Weighing at the field before packing.',
+				width: 960,
+				height: 1280,
+				focus: 'center 42%'
+			},
+			{
+				src: '/media/container-load.jpg',
+				alt: 'Mesh bags of shallots stacked inside an export container',
+				caption: 'Export mesh bags loaded for dispatch.',
+				width: 763,
+				height: 1155,
+				focus: 'center 40%'
+			}
+		]
+	}
+] as const;
 
 export const infrastructure = [
 	{
