@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { highlights } from '#lib/content.ts';
+	import { highlights, site } from '#lib/content.ts';
 </script>
 
 <section id="lots" class="bg-base-200 py-24 lg:py-32" aria-labelledby="lots-title">
@@ -18,7 +18,7 @@
 				<div>
 					<div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
 						<h3 class="font-display text-3xl">{group.name}</h3>
-						<a class="btn" href="#contact">{group.action}</a>
+						<a class="btn" href={site.whatsapp} target="_blank" rel="noopener noreferrer">{group.action}</a>
 					</div>
 					<ul class="mt-6 grid gap-4 sm:grid-cols-3">
 						{#each group.photos as photo (photo.src)}
