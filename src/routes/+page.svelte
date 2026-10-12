@@ -7,9 +7,7 @@
 	import Footer from '#lib/components/Footer.svelte';
 	import Header from '#lib/components/Header.svelte';
 	import Hero from '#lib/components/Hero.svelte';
-	import Markets from '#lib/components/Markets.svelte';
 	import Products from '#lib/components/Products.svelte';
-	import Proof from '#lib/components/Proof.svelte';
 	import type { PageProps } from './$types';
 
 	let { form }: PageProps = $props();
@@ -63,8 +61,6 @@
 			<About />
 			<Products />
 			<Capabilities />
-			<Proof />
-			<Markets />
 			<Faq />
 			<Contact result={form?.quote ?? null} />
 		</main>
@@ -86,7 +82,7 @@
 				</li>
 			{/each}
 			<li class="mt-4">
-				<a href="#contact" class="btn btn-secondary" onclick={closeMenu}>Request Supply Allocation</a>
+				<a href="#contact" class="btn btn-secondary" onclick={closeMenu}>Request Target Specifications</a>
 			</li>
 		</ul>
 	</div>

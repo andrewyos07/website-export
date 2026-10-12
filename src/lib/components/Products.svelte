@@ -6,11 +6,10 @@
 	<div class="rise-view mx-auto max-w-6xl px-6">
 		<p class="text-xs font-medium tracking-[0.22em] text-accent uppercase">Commodity divisions</p>
 		<h2 id="products-title" class="font-display mt-4 max-w-2xl text-4xl text-balance md:text-5xl">
-			Industrial Supply, Tailored to Your Specifications.
+			Commodity Divisions
 		</h2>
 		<p class="mt-5 max-w-2xl text-base-content/80">
-			We process and export diverse Indonesian commodities based on your exact laboratory and physical
-			requirements.
+			Each program lists the parameters our inspection taskforce confirms at origin before a lot is offered.
 		</p>
 
 		<ul class="mt-12 grid gap-8 sm:grid-cols-2">
@@ -48,6 +47,13 @@
 						<div class="card-body">
 							<h3 class="card-title font-display text-2xl">{product.name}</h3>
 							<p class="text-base-content/75">{product.summary}</p>
+							{#if product.specs}
+								<ul class="mt-3 list-disc space-y-1 pl-5 text-sm text-base-content/80">
+									{#each product.specs as spec (spec)}
+										<li>{spec}</li>
+									{/each}
+								</ul>
+							{/if}
 							<div class="card-actions mt-2">
 								<a
 									class="btn h-auto min-h-12 whitespace-normal text-center"

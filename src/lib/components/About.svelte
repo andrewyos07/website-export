@@ -5,15 +5,16 @@
 <section id="infrastructure" class="bg-base-200 py-24 lg:py-32" aria-labelledby="infrastructure-title">
 	<div class="rise-view mx-auto grid max-w-6xl items-start gap-16 px-6 lg:grid-cols-2">
 		<div>
-			<p class="text-xs font-medium tracking-[0.22em] text-accent uppercase">About our infrastructure</p>
+			<p class="text-xs font-medium tracking-[0.22em] text-accent uppercase">Our operational framework</p>
 			<h2 id="infrastructure-title" class="font-display mt-4 text-4xl text-balance md:text-5xl">
-				Vertically Integrated. Zero Intermediaries.
+				Direct from Origin. Verified at the Source.
 			</h2>
 			<p class="mt-6 text-lg leading-relaxed text-base-content/80">
-				We are a physical supply operator. By maintaining active agricultural operations and utilizing
-				regional post-harvest processing hubs in East Java, PT Irene Bumi Sukapura dictates the physical
-				grading, moisture levels, and purity of every metric ton we ship. Our infrastructure guarantees
-				industrial buyers a secure, scalable, and fully traceable supply line directly out of Indonesia.
+				We specialize in navigating the complexities of the Indonesian commodity market. We do not rely on
+				blind trust. For origin-specific commodities across Sumatra, Java, Bali, Sulawesi, and Nusa
+				Tenggara, our inspection taskforce deploys directly to the source. We personally oversee the
+				mechanical sorting, laboratory sampling, and container stuffing at regional facilities before
+				dispatching from Indonesia's major export gateways.
 			</p>
 			<ul class="mt-8 space-y-4">
 				{#each infrastructure as point (point.title)}
@@ -37,7 +38,7 @@
 					class="aspect-[4/3] w-full rounded-box object-cover object-[62%_38%]"
 				/>
 				<figcaption class="mt-3 text-sm text-base-content/70">
-					Bagged lots loaded for dispatch from East Java.
+					Lots containerized at the origin before dispatch.
 				</figcaption>
 			</figure>
 		</div>

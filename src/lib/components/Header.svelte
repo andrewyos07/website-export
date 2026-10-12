@@ -37,7 +37,7 @@
 					<path d="M3 6h16M3 11h16M3 16h16" fill="none" stroke="currentColor" stroke-width="1.6" />
 				</svg>
 			</label>
-			<a href="#top" class="flex min-w-0 items-center justify-center" onclick={closeMenu}>
+			<a href="#top" class="flex min-w-0 flex-col items-center justify-center gap-0.5" onclick={closeMenu}>
 				<img
 					src="/brand/logo.webp"
 					alt={site.name}
@@ -45,6 +45,9 @@
 					height="114"
 					class="h-8 w-auto max-w-full object-contain sm:h-10"
 				/>
+				<span class="max-w-36 text-center text-[0.6rem] leading-tight text-base-content/70 sm:max-w-none sm:text-[0.65rem]">
+					{site.tagline}
+				</span>
 			</a>
 			<ul class="desktop-nav menu menu-horizontal mx-auto gap-1 px-1 text-sm">
 				{#each nav as item (item.id)}
@@ -61,7 +64,7 @@
 			</ul>
 			<a href="#contact" class="nav-cta btn btn-sm sm:btn-md">
 				<span class="quote-short">Request</span>
-				<span class="quote-long">Request Supply Allocation</span>
+				<span class="quote-long">Request Target Specifications</span>
 			</a>
 		</div>
 	</div>

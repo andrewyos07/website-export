@@ -1,18 +1,17 @@
 <section id="top" class="hero min-h-[calc(100svh-5rem)] bg-base-100">
 	<div class="hero-content hero-split px-6 py-16 lg:py-28">
 		<div class="hero-copy w-full min-w-0 max-w-xl">
-			<p class="text-xs font-medium tracking-[0.22em] text-accent uppercase">Vertically integrated Indonesian commodity supply</p>
-			<h1 class="font-display mt-5 max-w-full text-4xl leading-tight text-base-content sm:text-5xl lg:text-6xl">
-				Industrial Commodity Production & Global Export Supply.
+			<h1 class="font-display max-w-full text-4xl leading-tight text-base-content sm:text-5xl lg:text-6xl">
+				Archipelago Sourcing. On-Site Verification.
 			</h1>
 			<p class="mt-6 text-lg leading-relaxed text-base-content/80">
-				PT Irene Bumi Sukapura operates an integrated physical supply network across Indonesia. We govern
-				the supply chain from raw material extraction to containerized port dispatch, delivering bulk
-				commodities tailored to your exact laboratory specifications and global destination standards.
+				PT Irene Bumi Sukapura is an Indonesian export aggregator. We procure raw materials from prime
+				cultivation zones across the archipelago, deploying our inspection taskforce directly to the origin
+				to enforce strict quality control and secure trade compliance.
 			</p>
 			<div class="mt-8 flex flex-col gap-3 sm:flex-row">
-				<a href="#contact" class="btn btn-primary btn-lg">Inquire Supply Allocation</a>
-				<a href="#products" class="btn btn-lg">View Commodity Divisions</a>
+				<a href="#contact" class="btn btn-primary btn-lg h-auto min-h-12 whitespace-normal text-center">Request Target Specifications</a>
+				<a href="#capabilities" class="btn btn-lg h-auto min-h-12 whitespace-normal text-center">View Export Capabilities</a>
 			</div>
 		</div>
 		<figure class="relative w-full min-w-0 max-w-xl">

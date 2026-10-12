@@ -9,9 +9,12 @@ const schema = {
 			url: site.publicUrl,
 			email: site.email,
 			logo: `${site.publicUrl}/brand/logo.webp`,
+			taxID: site.taxId,
 			address: {
 				'@type': 'PostalAddress',
-				addressLocality: 'Probolinggo and Sidoarjo',
+				streetAddress: 'Jl. Jendral A. Yani No. 152',
+				addressLocality: 'Probolinggo',
+				postalCode: '67217',
 				addressRegion: 'East Java',
 				addressCountry: 'ID'
 			}

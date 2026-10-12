@@ -53,10 +53,10 @@
 	<div class="mx-auto max-w-6xl">
 		<p class="text-xs font-medium tracking-[0.22em] text-accent uppercase">Capabilities</p>
 		<h2 id="capabilities-title" class="font-display mt-4 max-w-2xl text-4xl text-balance md:text-5xl">
-			Production to Port: Unbroken Custody.
+			Secure & Transparent Export Execution.
 		</h2>
 		<p class="mt-5 max-w-2xl text-base-content/80">
-			Every export lot is processed, tested, and containerized under our direct operational control.
+			How we protect your procurement from origin to port.
 		</p>
 	</div>
 </section>
