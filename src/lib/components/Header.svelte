@@ -45,9 +45,6 @@
 					height="114"
 					class="h-8 w-auto sm:h-10"
 				/>
-				<span class="mt-1 hidden max-w-64 text-[0.65rem] leading-tight tracking-wide text-base-content/70 lg:block">
-					{site.tagline}
-				</span>
 			</a>
 			<ul class="desktop-nav menu menu-horizontal mx-auto gap-1 px-1 text-sm">
 				{#each nav as item (item.id)}
