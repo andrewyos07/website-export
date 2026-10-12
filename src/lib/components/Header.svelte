@@ -37,13 +37,13 @@
 					<path d="M3 6h16M3 11h16M3 16h16" fill="none" stroke="currentColor" stroke-width="1.6" />
 				</svg>
 			</label>
-			<a href="#top" class="inline-flex min-w-0 shrink flex-col justify-center" onclick={closeMenu}>
+			<a href="#top" class="flex min-w-0 items-center justify-center" onclick={closeMenu}>
 				<img
 					src="/brand/logo.webp"
 					alt={site.name}
 					width="336"
 					height="114"
-					class="h-8 w-auto sm:h-10"
+					class="h-8 w-auto max-w-full object-contain sm:h-10"
 				/>
 			</a>
 			<ul class="desktop-nav menu menu-horizontal mx-auto gap-1 px-1 text-sm">
