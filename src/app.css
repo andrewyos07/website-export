@@ -1,0 +1,216 @@
+@import '@fontsource-variable/fraunces';
+@import '@fontsource-variable/outfit';
+@import 'tailwindcss';
+
+@plugin "daisyui" {
+	themes: false;
+}
+
+@plugin "daisyui/theme" {
+	name: "irene";
+	default: true;
+	prefersdark: false;
+	color-scheme: light;
+
+	--color-base-100: #fbf8f3;
+	--color-base-200: #f3eee6;
+	--color-base-300: #e6ddd0;
+	--color-base-content: #0b2441;
+	--color-primary: #0b2441;
+	--color-primary-content: #fbf8f3;
+	--color-secondary: #c09c55;
+	--color-secondary-content: #0b2441;
+	--color-accent: #6e5828;
+	--color-accent-content: #fbf8f3;
+	--color-neutral: #1a1814;
+	--color-neutral-content: #fbf8f3;
+	--color-info: #245c73;
+	--color-info-content: #fbf8f3;
+	--color-success: #1f6b45;
+	--color-success-content: #fbf8f3;
+	--color-warning: #8a5a12;
+	--color-warning-content: #fbf8f3;
+	--color-error: #8e2f2f;
+	--color-error-content: #fbf8f3;
+
+	--radius-selector: 0.5rem;
+	--radius-field: 0.25rem;
+	--radius-box: 0.75rem;
+	--size-selector: 0.25rem;
+	--size-field: 0.25rem;
+	--border: 1px;
+	--depth: 0;
+	--noise: 0;
+}
+
+@theme {
+	--font-sans: 'Outfit Variable', ui-sans-serif, system-ui, sans-serif;
+	--font-display: 'Fraunces Variable', Georgia, 'Times New Roman', serif;
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 6rem;
+}
+
+body {
+	background: var(--color-base-100);
+	color: var(--color-base-content);
+	overflow-x: clip;
+}
+
+:focus-visible {
+	outline: 2px solid var(--color-accent);
+	outline-offset: 3px;
+}
+
+.skip-link {
+	position: absolute;
+	left: 1rem;
+	top: 1rem;
+	z-index: 80;
+	transform: translateY(-180%);
+}
+
+.skip-link:focus {
+	transform: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.hero-copy {
+		animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+	}
+
+	.rise-view {
+		animation: rise linear both;
+		animation-timeline: view();
+		animation-range: entry 0% cover 28%;
+	}
+}
+
+.mark-drift {
+	animation: drift 14s ease-in-out infinite alternate;
+}
+
+.ticker {
+	contain: inline-size;
+}
+
+.site-nav {
+	display: grid;
+	width: 100%;
+	min-width: 0;
+	grid-template-columns: auto minmax(0, 1fr) auto;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.desktop-nav {
+	display: none !important;
+	margin-inline: auto;
+}
+
+.nav-cta {
+	margin-left: auto;
+	flex: none;
+	background: #c09c55;
+	color: #0b2441;
+}
+
+.quote-long {
+	display: none;
+}
+
+@media (min-width: 40rem) {
+	.quote-short {
+		display: none;
+	}
+
+	.quote-long {
+		display: inline;
+	}
+}
+
+@media (min-width: 64rem) {
+	.desktop-nav {
+		display: flex !important;
+	}
+}
+
+.hero-split {
+	display: flex;
+	width: 100%;
+	max-width: min(72rem, 100%);
+	box-sizing: border-box;
+	flex-direction: column;
+	align-items: stretch;
+	gap: 3rem;
+	padding-inline: 1.5rem;
+}
+
+.hero-copy {
+	width: 100%;
+	max-width: 36rem;
+	min-width: 0;
+}
+
+.hero-copy h1,
+.hero-copy p {
+	overflow-wrap: break-word;
+}
+
+@media (min-width: 64rem) {
+	.hero-split {
+		flex-direction: row;
+		gap: 5rem;
+	}
+}
+
+.ticker-track {
+	animation: ticker 42s linear infinite;
+}
+
+.ticker:hover .ticker-track,
+.ticker:focus-within .ticker-track {
+	animation-play-state: paused;
+}
+
+@keyframes rise {
+	from {
+		transform: translateY(1rem);
+	}
+	to {
+		transform: none;
+	}
+}
+
+@keyframes drift {
+	from {
+		transform: translate3d(0, 0, 0) rotate(-6deg);
+	}
+	to {
+		transform: translate3d(0, -12px, 0) rotate(4deg);
+	}
+}
+
+@keyframes ticker {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	.hero-copy,
+	.rise-view,
+	.mark-drift,
+	.ticker-track {
+		animation: none;
+	}
+}
