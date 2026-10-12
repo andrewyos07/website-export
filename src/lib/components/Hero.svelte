@@ -26,12 +26,10 @@
 				class="mark-drift pointer-events-none absolute -top-8 -left-4 hidden w-20 opacity-90 sm:block"
 			/>
 			<img
-				src="/media/hero-720.webp"
-				srcset="/media/hero-720.webp 720w, /media/hero-port.webp 1200w"
-				sizes="(min-width: 64rem) 36rem, calc(100vw - 3rem)"
-				alt="Aerial view of a container terminal with gantry cranes and stacked freight"
-				width="1200"
-				height="800"
+				src="/media/coffee-greenhouse.jpg"
+				alt="Coffee cherries drying on tiered racks inside a greenhouse"
+				width="1498"
+				height="842"
 				fetchpriority="high"
 				decoding="async"
 				class="block aspect-[4/3] h-auto w-full rounded-box bg-base-300 object-cover"

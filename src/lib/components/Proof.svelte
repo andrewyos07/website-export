@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { execution } from '#lib/content.ts';
+	import { execution, fieldPhotos } from '#lib/content.ts';
 </script>
 
 <section class="bg-base-100 py-24 lg:py-32" aria-labelledby="proof-title">
@@ -11,6 +11,26 @@
 		<p class="mt-5 max-w-2xl text-base-content/80">
 			Standardized commercial terms executed directly from our East Java production facilities.
 		</p>
+
+		<ul class="mt-12 grid gap-4 sm:grid-cols-3">
+			{#each fieldPhotos as photo (photo.src)}
+				<li>
+					<figure>
+						<img
+							src={photo.src}
+							alt={photo.alt}
+							width={photo.width}
+							height={photo.height}
+							loading="lazy"
+							decoding="async"
+							class="aspect-[4/3] w-full rounded-box object-cover"
+							style:object-position={photo.focus}
+						/>
+						<figcaption class="mt-2 text-sm text-base-content/70">{photo.caption}</figcaption>
+					</figure>
+				</li>
+			{/each}
+		</ul>
 
 		<div class="stats stats-vertical mt-12 w-full border border-base-300 bg-base-200 shadow-none md:stats-horizontal">
 			{#each execution as stat (stat.title)}

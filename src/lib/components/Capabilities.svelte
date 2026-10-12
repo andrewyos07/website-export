@@ -100,12 +100,26 @@
 			{/each}
 		</ol>
 
-		<div class="hidden rounded-box bg-neutral p-8 text-neutral-content md:p-10 lg:block" aria-live="polite" aria-atomic="true">
+		<div class={active.image ? undefined : 'hidden lg:block'} aria-live="polite" aria-atomic="true">
 			{#key active.id}
 				<div class="cap-detail">
-					<p class="text-xs font-medium tracking-[0.18em] text-secondary uppercase">{active.index}</p>
-					<h3 class="font-display mt-3 text-3xl">{active.title}</h3>
-					<p class="mt-4 leading-relaxed text-neutral-content/85">{active.summary}</p>
+					{#if active.image}
+						<img
+							src={active.image}
+							alt={active.alt}
+							width={active.width}
+							height={active.height}
+							loading="lazy"
+							decoding="async"
+							class="aspect-[4/3] w-full rounded-box object-cover"
+							style:object-position={active.focus}
+						/>
+					{/if}
+					<div class="mt-4 hidden rounded-box bg-neutral p-8 text-neutral-content md:p-10 lg:block">
+						<p class="text-xs font-medium tracking-[0.18em] text-secondary uppercase">{active.index}</p>
+						<h3 class="font-display mt-3 text-3xl">{active.title}</h3>
+						<p class="mt-4 leading-relaxed text-neutral-content/85">{active.summary}</p>
+					</div>
 				</div>
 			{/key}
 		</div>

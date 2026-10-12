@@ -41,6 +41,7 @@
 									decoding="async"
 									fetchpriority="low"
 									class="aspect-[4/3] w-full object-cover"
+									style:object-position={product.focus ?? 'center'}
 								/>
 							</figure>
 						{/if}

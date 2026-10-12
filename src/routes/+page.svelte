@@ -43,20 +43,13 @@
 	<meta property="og:title" content={site.title} />
 	<meta property="og:description" content={site.description} />
 	<meta property="og:url" content="{site.publicUrl}/" />
-	<meta property="og:image" content="{site.publicUrl}/media/hero-og.jpg" />
+	<meta property="og:image" content="{site.publicUrl}/media/coffee-greenhouse.jpg" />
 	<meta property="og:locale" content="en_US" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={site.title} />
 	<meta name="twitter:description" content={site.description} />
-	<meta name="twitter:image" content="{site.publicUrl}/media/hero-og.jpg" />
-	<link
-		rel="preload"
-		as="image"
-		type="image/webp"
-		href="/media/hero-720.webp"
-		imagesrcset="/media/hero-720.webp 720w, /media/hero-port.webp 1200w"
-		imagesizes="(min-width: 64rem) 36rem, calc(100vw - 3rem)"
-	/>
+	<meta name="twitter:image" content="{site.publicUrl}/media/coffee-greenhouse.jpg" />
+	<link rel="preload" as="image" type="image/jpeg" href="/media/coffee-greenhouse.jpg" />
 </svelte:head>
 
 <svelte:window onscroll={onScroll} />

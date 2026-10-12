@@ -27,17 +27,17 @@
 		<div>
 			<figure>
 				<img
-					src="/media/warehouse.webp"
-					alt="Export cargo staged for dispatch"
-					width="1100"
-					height="734"
+					src="/media/container-load.jpg"
+					alt="Mesh bags of shallots stacked to the roof of an export container"
+					width="763"
+					height="1155"
 					loading="lazy"
 					decoding="async"
 					fetchpriority="low"
-					class="aspect-[4/3] w-full rounded-box object-cover"
+					class="aspect-[4/3] w-full rounded-box object-cover object-[62%_38%]"
 				/>
 				<figcaption class="mt-3 text-sm text-base-content/70">
-					Export staging and palletizing at our East Java facility.
+					Bagged lots loaded for dispatch from East Java.
 				</figcaption>
 			</figure>
 		</div>

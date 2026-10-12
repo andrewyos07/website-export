@@ -34,6 +34,7 @@ export type Product = {
 	alt: string;
 	width: number;
 	height: number;
+	focus?: string;
 	mark?: boolean;
 };
 
@@ -46,10 +47,11 @@ export const products: Product[] = [
 		action: 'Inquire Plantation Supply',
 		href: '#contact',
 		external: false,
-		image: '/media/coffee.webp',
-		alt: 'Roasted coffee beans filling the frame',
-		width: 960,
-		height: 732
+		image: '/media/coffee-beds.jpg',
+		alt: 'Coffee cherries drying on raised beds',
+		width: 1200,
+		height: 1600,
+		focus: 'center 42%'
 	},
 	{
 		id: 'biomass',
@@ -59,10 +61,11 @@ export const products: Product[] = [
 		action: 'Inquire Biomass Supply',
 		href: '#contact',
 		external: false,
-		image: '/media/coconut.webp',
-		alt: 'Whole coconut beside two opened halves',
+		image: '/media/coconut-shells.jpg',
+		alt: 'Coconut shells piled at a processing yard',
 		width: 960,
-		height: 640
+		height: 1280,
+		focus: 'center'
 	},
 	{
 		id: 'botanicals',
@@ -142,26 +145,53 @@ export const markets = [
 	}
 ] as const;
 
-export const steps = [
+type Step = {
+	id: string;
+	index: string;
+	title: string;
+	summary: string;
+	image?: string;
+	alt?: string;
+	width?: number;
+	height?: number;
+	focus?: string;
+};
+
+export const steps: Step[] = [
 	{
 		id: 'sourcing',
 		index: '01',
 		title: 'Sourcing',
-		summary: 'Direct harvest from managed highland estates and contracted cultivation zones.'
+		summary: 'Direct harvest from managed highland estates and contracted cultivation zones.',
+		image: '/media/coffee-seedlings.jpg',
+		alt: 'Coffee seedlings ready for planting',
+		width: 1280,
+		height: 748,
+		focus: 'center'
 	},
 	{
 		id: 'quality',
 		index: '02',
 		title: 'Processing & Quality',
 		summary:
-			'Mechanical sorting, washing, drying, and batch-specific laboratory testing executed at our East Java facilities.'
+			'Mechanical sorting, washing, drying, and batch-specific laboratory testing executed at our East Java facilities.',
+		image: '/media/shallot-drying.jpg',
+		alt: 'Shallots drying on raised bamboo racks',
+		width: 960,
+		height: 1280,
+		focus: 'center 68%'
 	},
 	{
 		id: 'packing',
 		index: '03',
 		title: 'Packing',
 		summary:
-			'Industrial packaging, including hermetic sealing, multi-ply craft bags, and high-density hydraulic compression.'
+			'Industrial packaging, including hermetic sealing, multi-ply craft bags, and high-density hydraulic compression.',
+		image: '/media/coconut-bales.jpg',
+		alt: 'Compressed coconut coir bales stacked for shipment',
+		width: 1280,
+		height: 634,
+		focus: 'center'
 	},
 	{
 		id: 'documents',
@@ -174,9 +204,41 @@ export const steps = [
 		id: 'shipping',
 		index: '05',
 		title: 'Shipping',
-		summary: 'Direct container transfer and handover at the Port of Tanjung Perak (IDTPE).'
+		summary: 'Direct container transfer and handover at the Port of Tanjung Perak (IDTPE).',
+		image: '/media/dispatch-truck.jpg',
+		alt: 'A truck loaded with bagged shallots ready for dispatch',
+		width: 963,
+		height: 1280,
+		focus: 'center 36%'
 	}
-] as const;
+];
+
+export const fieldPhotos = [
+	{
+		src: '/media/shallot-weighing.jpg',
+		alt: 'Workers weighing a shallot harvest beside the field',
+		caption: 'Harvest weighing before the lot enters processing.',
+		width: 960,
+		height: 1280,
+		focus: 'center 42%'
+	},
+	{
+		src: '/media/coconut-coir.jpg',
+		alt: 'Coconut coir piled under a processing shed',
+		caption: 'Coconut coir staged for substrate processing.',
+		width: 960,
+		height: 1280,
+		focus: 'center 72%'
+	},
+	{
+		src: '/media/container-crew.jpg',
+		alt: 'A worker beside mesh bags stacked inside a container',
+		caption: 'Container stuffing handled by our own crew.',
+		width: 718,
+		height: 1277,
+		focus: 'center 48%'
+	}
+];
 
 export const faqs = [
 	{
