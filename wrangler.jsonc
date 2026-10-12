@@ -7,11 +7,20 @@
 	},
 	"compatibility_date": "2026-10-12",
 	"compatibility_flags": ["nodejs_als"],
+	"workers_dev": false,
 	"observability": {
 		"enabled": true
 	},
+	"routes": [{ "pattern": "www.bumisukapura.com", "custom_domain": true }],
 	"assets": {
 		"binding": "ASSETS",
 		"directory": ".svelte-kit/cloudflare"
-	}
+	},
+	"send_email": [
+		{
+			"name": "EMAIL",
+			"destination_address": "info@bumisukapura.com",
+			"allowed_sender_addresses": ["noreply@bumisukapura.com"]
+		}
+	]
 }

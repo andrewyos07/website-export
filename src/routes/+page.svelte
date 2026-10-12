@@ -11,7 +11,7 @@
 	import Products from '#lib/components/Products.svelte';
 	import type { PageProps } from './$types';
 
-	let { form }: PageProps = $props();
+	let { data, form }: PageProps = $props();
 	let menuOpen = $state(false);
 	let active = $state('top');
 	let scrolled = $state(false);
@@ -43,6 +43,9 @@
 	<meta property="og:description" content={site.description} />
 	<meta property="og:url" content="{site.publicUrl}/" />
 	<meta property="og:image" content="{site.publicUrl}/media/coffee-greenhouse.jpg" />
+	<meta property="og:image:alt" content="Coffee cherries drying on tiered racks inside a greenhouse" />
+	<meta property="og:image:width" content="1498" />
+	<meta property="og:image:height" content="842" />
 	<meta property="og:locale" content="en_US" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={site.title} />
@@ -64,7 +67,7 @@
 			<Gallery />
 			<Capabilities />
 			<Faq />
-			<Contact result={form?.quote ?? null} />
+			<Contact result={form?.quote ?? null} sent={data.inquirySent} local={data.inquiryLocal} />
 		</main>
 		<Footer />
 	</div>

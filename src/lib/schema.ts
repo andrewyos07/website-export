@@ -6,10 +6,18 @@ const schema = {
 		{
 			'@type': 'Organization',
 			name: site.name,
+			legalName: site.legalName,
+			alternateName: 'Irene Bumi Sukapura',
 			url: site.publicUrl,
 			email: site.email,
+			telephone: '+6285190978383',
 			logo: `${site.publicUrl}/brand/logo.webp`,
 			taxID: site.taxId,
+			identifier: {
+				'@type': 'PropertyValue',
+				propertyID: 'NIB',
+				value: site.nib
+			},
 			address: {
 				'@type': 'PostalAddress',
 				streetAddress: 'Jl. Jendral A. Yani No. 152',

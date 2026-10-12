@@ -2,7 +2,7 @@ export const site = {
 	name: 'PT Irene Bumi Sukapura',
 	publicUrl: 'https://bumisukapura.com',
 	legalName: 'PT IRENE BUMI SUKAPURA',
-	title: 'Archipelago Sourcing | PT Irene Bumi Sukapura',
+	title: 'PT Irene Bumi Sukapura | Verified Indonesian Commodity Sourcing',
 	description:
 		'PT Irene Bumi Sukapura is an Indonesian export aggregator. We procure raw materials across the archipelago and verify quality on site before dispatch.',
 	tagline: 'Verified Indonesian Commodity Sourcing',
@@ -344,6 +344,8 @@ export type QuoteResult = {
 	values?: QuoteValues;
 	error?: string;
 	success?: boolean;
+	locked?: boolean;
+	simulated?: boolean;
 };
 
 export type NewsletterResult = {
