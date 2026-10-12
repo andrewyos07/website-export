@@ -1,4 +1,3 @@
-import { redirect } from '@sveltejs/kit';
 import type { Handle } from '@sveltejs/kit/hooks';
 import { site } from '#lib/content.ts';
 import { jsonLd } from '#lib/schema.ts';
@@ -10,8 +9,8 @@ export const handle: Handle = async ({ event, resolve }) => {
 		const destination = new URL(event.url);
 		destination.protocol = canonical.protocol;
 		destination.hostname = canonical.hostname;
-		destination.port = canonical.port;
-		redirect(301, destination.href);
+		destination.port = '';
+		return new Response(null, { status: 301, headers: { location: destination.href } });
 	}
 
 	return resolve(event, {
