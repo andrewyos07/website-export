@@ -60,6 +60,96 @@ export const heroSlides = [
 	}
 ] as const;
 
+export type Photo = {
+	src: string;
+	alt: string;
+	caption: string;
+	width: number;
+	height: number;
+	focus: string;
+};
+
+const coffeePhotos: Photo[] = [
+	{
+		src: '/media/coffee-beds.jpg',
+		alt: 'Coffee cherries drying on raised beds',
+		caption: 'Cherries drying on raised beds.',
+		width: 1200,
+		height: 1600,
+		focus: 'center 42%'
+	},
+	{
+		src: '/media/coffee-greenhouse.jpg',
+		alt: 'Coffee cherries drying on tiered racks inside a greenhouse',
+		caption: 'Greenhouse drying before moisture is checked.',
+		width: 1498,
+		height: 842,
+		focus: 'center'
+	},
+	{
+		src: '/media/coffee-seedlings.jpg',
+		alt: 'Coffee seedlings ready for planting',
+		caption: 'Seedlings at a cultivation plot.',
+		width: 1280,
+		height: 748,
+		focus: 'center'
+	}
+];
+
+const coconutPhotos: Photo[] = [
+	{
+		src: '/media/coconut-shells.jpg',
+		alt: 'Coconut shells piled at a processing yard',
+		caption: 'Shells at the yard before fiber is separated.',
+		width: 960,
+		height: 1280,
+		focus: 'center'
+	},
+	{
+		src: '/media/coconut-coir.jpg',
+		alt: 'Coconut coir piled under a processing shed',
+		caption: 'Coir staged for substrate processing.',
+		width: 960,
+		height: 1280,
+		focus: 'center 72%'
+	},
+	{
+		src: '/media/coconut-bales.jpg',
+		alt: 'Compressed coconut coir bales stacked for shipment',
+		caption: 'Compressed bales ready for export.',
+		width: 1280,
+		height: 634,
+		focus: 'center'
+	}
+];
+
+const shallotPhotos: Photo[] = [
+	{
+		src: '/media/shallot-drying.jpg',
+		alt: 'Shallots drying on raised bamboo racks',
+		caption: 'Curing on raised racks.',
+		width: 960,
+		height: 1280,
+		focus: 'center bottom'
+	},
+	{
+		src: '/media/shallot-weighing.jpg',
+		alt: 'Workers weighing a shallot harvest beside the field',
+		caption: 'Weighing at the field before packing.',
+		width: 960,
+		height: 1280,
+		focus: 'center 42%'
+	},
+	{
+		src: '/media/container-load.jpg',
+		alt: 'Mesh bags of shallots stacked inside an export container',
+		caption: 'Export mesh bags loaded for dispatch.',
+		width: 763,
+		height: 1155,
+		focus: 'center 40%'
+	}
+];
+
 export type Product = {
 	id: string;
 	name: string;
@@ -68,12 +158,7 @@ export type Product = {
 	action: string;
 	href: string;
 	external: boolean;
-	image: string;
-	alt: string;
-	width: number;
-	height: number;
-	focus?: string;
-	mark?: boolean;
+	photos: Photo[];
 };
 
 export const products: Product[] = [
@@ -90,11 +175,7 @@ export const products: Product[] = [
 		action: 'Contact on WhatsApp',
 		href: site.whatsapp,
 		external: true,
-		image: '/media/coffee-beds.jpg',
-		alt: 'Coffee cherries drying on raised beds',
-		width: 1200,
-		height: 1600,
-		focus: 'center 42%'
+		photos: coffeePhotos
 	},
 	{
 		id: 'coconut',
@@ -109,11 +190,7 @@ export const products: Product[] = [
 		action: 'Contact on WhatsApp',
 		href: site.whatsapp,
 		external: true,
-		image: '/media/coconut-bales.jpg',
-		alt: 'Compressed coconut coir bales stacked for shipment',
-		width: 1280,
-		height: 634,
-		focus: 'center'
+		photos: coconutPhotos
 	},
 	{
 		id: 'shallots',
@@ -128,11 +205,7 @@ export const products: Product[] = [
 		action: 'Contact on WhatsApp',
 		href: site.whatsapp,
 		external: true,
-		image: '/media/shallot-drying.jpg',
-		alt: 'Shallots drying on raised bamboo racks',
-		width: 960,
-		height: 1280,
-		focus: 'center bottom'
+		photos: shallotPhotos
 	}
 ];
 
@@ -158,99 +231,9 @@ export const services = [
 ] as const;
 
 export const highlights = [
-	{
-		id: 'coffee',
-		name: 'Coffee',
-		action: 'Contact on WhatsApp',
-		photos: [
-			{
-				src: '/media/coffee-beds.jpg',
-				alt: 'Coffee cherries drying on raised beds',
-				caption: 'Cherries drying on raised beds.',
-				width: 1200,
-				height: 1600,
-				focus: 'center 42%'
-			},
-			{
-				src: '/media/coffee-greenhouse.jpg',
-				alt: 'Coffee cherries drying on tiered racks inside a greenhouse',
-				caption: 'Greenhouse drying before moisture is checked.',
-				width: 1498,
-				height: 842,
-				focus: 'center'
-			},
-			{
-				src: '/media/coffee-seedlings.jpg',
-				alt: 'Coffee seedlings ready for planting',
-				caption: 'Seedlings at a cultivation plot.',
-				width: 1280,
-				height: 748,
-				focus: 'center'
-			}
-		]
-	},
-	{
-		id: 'cocopeat',
-		name: 'Coconut',
-		action: 'Contact on WhatsApp',
-		photos: [
-			{
-				src: '/media/coconut-shells.jpg',
-				alt: 'Coconut shells piled at a processing yard',
-				caption: 'Shells at the yard before fiber is separated.',
-				width: 960,
-				height: 1280,
-				focus: 'center'
-			},
-			{
-				src: '/media/coconut-coir.jpg',
-				alt: 'Coconut coir piled under a processing shed',
-				caption: 'Coir staged for substrate processing.',
-				width: 960,
-				height: 1280,
-				focus: 'center 72%'
-			},
-			{
-				src: '/media/coconut-bales.jpg',
-				alt: 'Compressed coconut coir bales stacked for shipment',
-				caption: 'Compressed bales ready for export.',
-				width: 1280,
-				height: 634,
-				focus: 'center'
-			}
-		]
-	},
-	{
-		id: 'produce',
-		name: 'Fresh shallots',
-		action: 'Contact on WhatsApp',
-		photos: [
-			{
-				src: '/media/shallot-drying.jpg',
-				alt: 'Shallots drying on raised bamboo racks',
-				caption: 'Curing on raised racks.',
-				width: 960,
-				height: 1280,
-				focus: 'center bottom'
-			},
-			{
-				src: '/media/shallot-weighing.jpg',
-				alt: 'Workers weighing a shallot harvest beside the field',
-				caption: 'Weighing at the field before packing.',
-				width: 960,
-				height: 1280,
-				focus: 'center 42%'
-			},
-			{
-				src: '/media/container-load.jpg',
-				alt: 'Mesh bags of shallots stacked inside an export container',
-				caption: 'Export mesh bags loaded for dispatch.',
-				width: 763,
-				height: 1155,
-				focus: 'center 40%'
-			}
-		]
-	}
+	{ id: 'coffee', name: 'Coffee', action: 'Contact on WhatsApp', photos: coffeePhotos },
+	{ id: 'cocopeat', name: 'Coconut', action: 'Contact on WhatsApp', photos: coconutPhotos },
+	{ id: 'produce', name: 'Fresh shallots', action: 'Contact on WhatsApp', photos: shallotPhotos }
 ] as const;
 
 type Step = {
