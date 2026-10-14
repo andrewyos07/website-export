@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { nav, site } from '#lib/content.ts';
-	import About from '#lib/components/About.svelte';
 	import Capabilities from '#lib/components/Capabilities.svelte';
 	import Contact from '#lib/components/Contact.svelte';
 	import Faq from '#lib/components/Faq.svelte';
@@ -9,6 +8,7 @@
 	import Header from '#lib/components/Header.svelte';
 	import Hero from '#lib/components/Hero.svelte';
 	import Products from '#lib/components/Products.svelte';
+	import Services from '#lib/components/Services.svelte';
 	import type { PageProps } from './$types';
 
 	let { data, form }: PageProps = $props();
@@ -62,12 +62,12 @@
 		<Header {active} {scrolled} {closeMenu} />
 		<main id="main">
 			<Hero />
-			<About />
 			<Products />
+			<Services />
 			<Gallery />
 			<Capabilities />
-			<Faq />
 			<Contact result={form?.quote ?? null} sent={data.inquirySent} local={data.inquiryLocal} />
+			<Faq />
 		</main>
 		<Footer />
 	</div>
@@ -87,7 +87,7 @@
 				</li>
 			{/each}
 			<li class="mt-4">
-				<a href="#contact" class="btn btn-secondary" onclick={closeMenu}>Request Target Specifications</a>
+				<a href="#contact" class="btn btn-secondary" onclick={closeMenu}>Contact Us</a>
 			</li>
 		</ul>
 	</div>

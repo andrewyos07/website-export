@@ -154,6 +154,11 @@ body {
 	min-width: 0;
 }
 
+.hero-slides {
+	width: 100%;
+	min-width: 0;
+}
+
 .hero-copy h1,
 .hero-copy p {
 	overflow-wrap: break-word;
@@ -162,7 +167,15 @@ body {
 @media (min-width: 64rem) {
 	.hero-split {
 		flex-direction: row;
+		align-items: center;
 		gap: 5rem;
+	}
+
+	.hero-copy,
+	.hero-slides {
+		flex: 1 1 0%;
+		width: auto;
+		min-width: 0;
 	}
 }
 

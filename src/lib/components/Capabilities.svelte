@@ -53,11 +53,9 @@
 	<div class="mx-auto max-w-6xl">
 		<p class="text-xs font-medium tracking-[0.22em] text-accent uppercase">Capabilities</p>
 		<h2 id="capabilities-title" class="font-display mt-4 max-w-2xl text-4xl text-balance md:text-5xl">
-			Secure & Transparent Export Execution.
+			Our Capabilities
 		</h2>
-		<p class="mt-5 max-w-2xl text-base-content/80">
-			How we protect your procurement from origin to port.
-		</p>
+		<p class="mt-5 max-w-2xl text-base-content/80">How we bring Indonesian quality to the world.</p>
 	</div>
 </section>
 

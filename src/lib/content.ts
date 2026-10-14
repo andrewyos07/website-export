@@ -2,30 +2,62 @@ export const site = {
 	name: 'PT Irene Bumi Sukapura',
 	publicUrl: 'https://bumisukapura.com',
 	legalName: 'PT IRENE BUMI SUKAPURA',
-	title: 'PT Irene Bumi Sukapura | Verified Indonesian Commodity Sourcing',
+	title: 'PT Irene Bumi Sukapura | Quality Starts at the Origin',
 	description:
-		'PT Irene Bumi Sukapura is an Indonesian export aggregator. We procure raw materials across the archipelago and verify quality on site before dispatch.',
-	tagline: 'Verified Indonesian Commodity Sourcing',
-	operations:
-		'Export Sourcing & QC Aggregator | NIB: 2909260001434 | Tax ID: 1000000011337965',
+		'PT Irene Bumi Sukapura is an Indonesian processor and exporter of coffee, coconut derivatives, and fresh shallots.',
+	tagline: 'Quality Starts at the Origin.',
+	operations: 'Jl. A. Yani 152, Mangunharjo, Mayangan, Probolinggo 67217',
 	summary:
-		'PT Irene Bumi Sukapura is an Indonesian export aggregator. We procure raw materials from prime cultivation zones and verify quality at the origin.',
+		'PT Irene Bumi Sukapura is an Indonesian processor and exporter focused on coffee, coconut derivatives, and fresh shallots.',
 	email: 'info@bumisukapura.com',
 	whatsapp: 'https://wa.me/6285190978383',
 	whatsappDisplay: '+62 851-9097-8383',
 	director: 'Richa Irene Putri',
 	nib: '2909260001434',
 	taxId: '1000000011337965',
-	address: 'Jl. Jendral A. Yani No. 152, Probolinggo 67217, East Java – Indonesia',
+	address:
+		'Jl. A. Yani 152, Mangunharjo, Mayangan, Probolinggo City 67217, East Java - Indonesia',
 	gateways: 'Tanjung Perak (IDTPE) | Belawan (IDBLW) | Tanjung Priok (IDTPP) | Makassar (IDMAK)'
 };
 
 export const nav = [
 	{ id: 'top', label: 'Home' },
-	{ id: 'infrastructure', label: 'Framework' },
-	{ id: 'products', label: 'Commodity Divisions' },
+	{ id: 'products', label: 'Products' },
+	{ id: 'services', label: 'Services' },
+	{ id: 'gallery', label: 'Gallery' },
 	{ id: 'capabilities', label: 'Capabilities' },
 	{ id: 'contact', label: 'Contact' }
+] as const;
+
+export const heroSlides = [
+	{
+		src: '/media/coffee-greenhouse.jpg',
+		alt: 'Coffee cherries drying on tiered racks inside a greenhouse',
+		width: 1498,
+		height: 842,
+		focus: 'center'
+	},
+	{
+		src: '/media/coconut-bales.jpg',
+		alt: 'Compressed coconut coir bales stacked for shipment',
+		width: 1280,
+		height: 634,
+		focus: 'center'
+	},
+	{
+		src: '/media/shallot-drying.jpg',
+		alt: 'Shallots drying on raised bamboo racks',
+		width: 960,
+		height: 1280,
+		focus: 'center bottom'
+	},
+	{
+		src: '/media/container-load.jpg',
+		alt: 'Mesh bags of shallots stacked inside an export container',
+		width: 763,
+		height: 1155,
+		focus: 'center 40%'
+	}
 ] as const;
 
 export type Product = {
@@ -47,16 +79,15 @@ export type Product = {
 export const products: Product[] = [
 	{
 		id: 'coffee',
-		name: 'Coffee (Arabica & Robusta)',
+		name: 'Coffee Beans (Arabica & Robusta)',
 		summary:
-			"Sourced from Indonesia's most celebrated volcanic regions. We supply a comprehensive spectrum of coffee, ranging from premium specialty grades to high-volume commercial beans tailored for industrial roasters.",
+			'We supply a reliable range of Indonesian coffee, from high-volume commercial beans to premium grades. Sourced directly from trusted highland farmers.',
 		specs: [
-			'Processing: Full Washed, Semi-Washed (Wet Hulled), Natural, Honey',
-			'Grades: Premium Grade 1 down to High-Volume Commercial Grades',
+			'Processing: Full Washed, Semi-Washed, Natural',
 			'Origins: Sumatra, Java, Bali, Sulawesi',
-			'Moisture Range: 11% - 12.5%'
+			'Moisture: Strict quality control at Max 12.5%'
 		],
-		action: 'Request Coffee Catalog',
+		action: 'Contact on WhatsApp',
 		href: site.whatsapp,
 		external: true,
 		image: '/media/coffee-beds.jpg',
@@ -66,17 +97,16 @@ export const products: Product[] = [
 		focus: 'center 42%'
 	},
 	{
-		id: 'cocopeat',
-		name: 'Coconut Substrates (Cocopeat)',
+		id: 'coconut',
+		name: 'Coconut Derivatives & Biomass',
 		summary:
-			'Industrial-grade coconut husk derivatives configured for commercial horticulture and agriculture. Compacted into high-density blocks for massive logistics scalability.',
+			'A comprehensive range of high-quality coconut products for horticulture and industrial manufacturing. We oversee the processing to ensure consistent volume and specs.',
 		specs: [
-			'Block Format: 5kg Compressed Block',
-			'EC Levels: High EC (> 0.5) & Low EC Hydroponic Grade (< 0.5)',
-			'Moisture & pH: Moisture < 20% | pH 5.5 - 6.5',
-			'Expansion: 70 - 80 Liters per block'
+			'Substrates: Cocopeat, Coco Husk & Coco Bristle',
+			'Industrial & Feed: Coconut Oil (CNO) & Copra Meal',
+			'Quality: Processed and graded to international standards'
 		],
-		action: 'Request Substrate Specs',
+		action: 'Contact on WhatsApp',
 		href: site.whatsapp,
 		external: true,
 		image: '/media/coconut-bales.jpg',
@@ -86,35 +116,16 @@ export const products: Product[] = [
 		focus: 'center'
 	},
 	{
-		id: 'spices',
-		name: 'Whole Spices, Roots & Botanicals',
+		id: 'shallots',
+		name: 'Fresh Red Shallots',
 		summary:
-			'Bulk extraction of premium Indonesian spices and rhizomes. Mechanically sorted at our regional facilities to achieve your mandated purity percentages.',
+			'Freshly harvested shallots directly from Probolinggo and Bima. We oversee the curing, grading, and packing process to guarantee export-ready quality.',
 		specs: [
-			'Core Items: Ginger (Dried/Fresh), Lal Pari Cloves, Black Pepper (500/550 GL), Vanilla',
-			'Quality: Hand-Picked and FAQ (Fair Average Quality) Grades',
-			'Moisture: Strict drying controls (Max 10-12% for dried spices)'
+			'Size: 2.5 cm - 3.5 cm',
+			'Condition: Clean, dry, and export-ready',
+			'Packaging: 10kg - 20kg Mesh Bags'
 		],
-		action: 'Request Spices Spec Sheet',
-		href: site.whatsapp,
-		external: true,
-		image: '/media/spices.webp',
-		alt: 'Pepper, cinnamon, clove, ginger, turmeric, and chili arranged on a table',
-		width: 960,
-		height: 640
-	},
-	{
-		id: 'produce',
-		name: 'Fresh Produce & Alliums',
-		summary:
-			"Procured directly from Indonesia's premium agricultural hubs. We oversee the curing, sorting, and export-grade packaging of fresh produce directly at the origin.",
-		specs: [
-			'Product: Fresh Red Shallots (Allium cepa var. aggregatum)',
-			'Origins: Bima (Nusa Tenggara) and Probolinggo (East Java)',
-			'Size Grading: 2.5 cm - 3.5 cm (Adjustable to target specs)',
-			'Packaging: 10kg - 20kg Export Mesh Bags'
-		],
-		action: 'Request Fresh Produce Quote',
+		action: 'Contact on WhatsApp',
 		href: site.whatsapp,
 		external: true,
 		image: '/media/shallot-drying.jpg',
@@ -122,28 +133,35 @@ export const products: Product[] = [
 		width: 960,
 		height: 1280,
 		focus: 'center bottom'
-	},
-	{
-		id: 'custom',
-		name: 'On-Demand Custom Sourcing',
-		summary:
-			'Require specific Indonesian raw materials not listed above? Submit your Target Specification Sheet. From essential oils to industrial biomass, we can source, verify, and consolidate your cargo through our established network.',
-		action: 'Consult Custom Supply',
-		href: site.whatsapp,
-		external: true,
-		image: '/brand/mark.png',
-		alt: '',
-		width: 184,
-		height: 149,
-		mark: true
 	}
 ];
+
+export const services = [
+	{
+		id: 'custom',
+		title: 'Custom Sourcing',
+		summary:
+			'Looking for other Indonesian commodities like spices or botanicals? Tell us what you need. Through our trusted network, we will source and prepare it for you.'
+	},
+	{
+		id: 'quality',
+		title: 'Quality Control & Processing',
+		summary:
+			'We believe quality is built on the ground. We work closely with local facilities to oversee the sorting, moisture control, and packing processes before shipment.'
+	},
+	{
+		id: 'consolidation',
+		title: 'Export Consolidation',
+		summary:
+			'We make your importing process simple. Our team handles the port logistics, phytosanitary documents, and customs clearance so your cargo arrives safely.'
+	}
+] as const;
 
 export const highlights = [
 	{
 		id: 'coffee',
 		name: 'Coffee',
-		action: 'Request Coffee Catalog',
+		action: 'Contact on WhatsApp',
 		photos: [
 			{
 				src: '/media/coffee-beds.jpg',
@@ -173,8 +191,8 @@ export const highlights = [
 	},
 	{
 		id: 'cocopeat',
-		name: 'Cocopeat',
-		action: 'Request Substrate Specs',
+		name: 'Coconut',
+		action: 'Contact on WhatsApp',
 		photos: [
 			{
 				src: '/media/coconut-shells.jpg',
@@ -205,7 +223,7 @@ export const highlights = [
 	{
 		id: 'produce',
 		name: 'Fresh shallots',
-		action: 'Request Fresh Produce Quote',
+		action: 'Contact on WhatsApp',
 		photos: [
 			{
 				src: '/media/shallot-drying.jpg',
@@ -235,21 +253,6 @@ export const highlights = [
 	}
 ] as const;
 
-export const infrastructure = [
-	{
-		title: 'Archipelago Sourcing Network',
-		body: 'Direct procurement access to audited local mills, estates, and agricultural cooperatives nationwide.'
-	},
-	{
-		title: 'On-Site Quality Control',
-		body: 'Our deployment team verifies moisture levels, defect counts, and grading parameters directly at the regional processing facilities.'
-	},
-	{
-		title: 'Origin Port Dispatch',
-		body: 'To maintain cargo integrity and reduce transit times, lots are containerized and dispatched from the nearest major international port.'
-	}
-] as const;
-
 type Step = {
 	id: string;
 	index: string;
@@ -266,9 +269,8 @@ export const steps: Step[] = [
 	{
 		id: 'sourcing',
 		index: '01',
-		title: 'Transparent Sourcing',
-		summary:
-			'We match your target specifications with available production lots from our nationwide network.',
+		title: 'Sourcing',
+		summary: 'We partner directly with local farmers to secure the best raw materials.',
 		image: '/media/coffee-seedlings.jpg',
 		alt: 'Coffee seedlings ready for planting',
 		width: 1280,
@@ -276,11 +278,10 @@ export const steps: Step[] = [
 		focus: 'center'
 	},
 	{
-		id: 'verification',
+		id: 'preparation',
 		index: '02',
-		title: 'On-Site Verification',
-		summary:
-			'Our deployment team and independent surveyors (SGS/Intertek) verify quality, quantity, and weight at the origin processing facility.',
+		title: 'Preparation',
+		summary: 'We clean, sort, and process the goods to match your exact specifications.',
 		image: '/media/shallot-weighing.jpg',
 		alt: 'Workers weighing a shallot harvest beside the field',
 		width: 960,
@@ -288,23 +289,27 @@ export const steps: Step[] = [
 		focus: 'center 42%'
 	},
 	{
-		id: 'documents',
+		id: 'packing',
 		index: '03',
-		title: 'Export Documentation',
-		summary:
-			'We clear Phytosanitary, Fumigation, Certificate of Origin (COO), and Customs simultaneously with loading.',
-		image: '/media/container-load.jpg',
-		alt: 'Mesh bags of shallots stacked inside an export container',
-		width: 763,
-		height: 1155,
-		focus: 'center 40%'
+		title: 'Packing',
+		summary: 'We use secure, export-standard packaging for safe international transit.',
+		image: '/media/coconut-bales.jpg',
+		alt: 'Compressed coconut coir bales stacked for shipment',
+		width: 1280,
+		height: 634,
+		focus: 'center'
 	},
 	{
-		id: 'payment',
+		id: 'shipping',
 		index: '04',
-		title: 'Secure Payment',
+		title: 'Shipping',
 		summary:
-			'Transactions are executed via Irrevocable L/C at sight, ensuring funds are only released upon presentation of clean shipping documents.'
+			'We handle the logistics and dispatch from major Indonesian ports directly to your destination.',
+		image: '/media/dispatch-truck.jpg',
+		alt: 'Mesh bags loaded in a truck for dispatch',
+		width: 963,
+		height: 793,
+		focus: 'center'
 	}
 ];
 
@@ -313,19 +318,19 @@ export const faqs = [
 		id: 'payment',
 		question: 'What are your payment terms?',
 		answer:
-			'We prioritize Irrevocable Letter of Credit (L/C) at sight from prime international banks. For initial trial orders (LCL), Telegraphic Transfer (T/T) can be discussed.'
-	},
-	{
-		id: 'inspection',
-		question: 'Can we use our own inspection agency?',
-		answer:
-			'Absolutely. We encourage buyers to appoint SGS, Intertek, or Cotecna for pre-shipment inspection at the loading port. The surveyor cost is borne by the buyer.'
+			'We are flexible to support your business. We accept both Telegraphic Transfer (T/T) and Letter of Credit (L/C). We are happy to discuss the best payment option for your order.'
 	},
 	{
 		id: 'samples',
-		question: 'Can we request samples before signing a contract?',
+		question: 'Can we request product samples?',
 		answer:
-			'Yes. Verified production samples are available. The sample material is complimentary; however, the international courier freight (DHL/FedEx) must be covered by the buyer.'
+			'Yes, we provide free product samples. Buyers only need to cover the international shipping cost (DHL/FedEx).'
+	},
+	{
+		id: 'inspection',
+		question: 'Do you allow third-party inspections?',
+		answer:
+			'Yes. You are welcome to appoint independent surveyors like SGS or Intertek to check the cargo before shipment.'
 	}
 ] as const;
 

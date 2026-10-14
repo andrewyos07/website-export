@@ -17,12 +17,9 @@
 	<div class="mx-auto grid max-w-6xl gap-16 px-6 lg:grid-cols-2">
 		<div>
 			<p class="text-xs font-medium tracking-[0.22em] text-secondary uppercase">Contact</p>
-			<h2 id="contact-title" class="font-display mt-4 text-4xl text-balance md:text-5xl">
-				Secure Your Supply Allocation
-			</h2>
+			<h2 id="contact-title" class="font-display mt-4 text-4xl text-balance md:text-5xl">Get in Touch</h2>
 			<p class="mt-6 leading-relaxed text-neutral-content/80">
-				Submit your Target Specification Sheet (commodity type, required grading, moisture limits, and
-				volume). Our operations desk will respond with availability and preliminary pricing.
+				Let’s discuss how we can support your supply chain.
 			</p>
 		</div>
 

@@ -20,7 +20,7 @@ const schema = {
 			},
 			address: {
 				'@type': 'PostalAddress',
-				streetAddress: 'Jl. Jendral A. Yani No. 152',
+				streetAddress: 'Jl. A. Yani 152, Mangunharjo, Mayangan',
 				addressLocality: 'Probolinggo',
 				postalCode: '67217',
 				addressRegion: 'East Java',

@@ -63,8 +63,8 @@
 				{/each}
 			</ul>
 			<a href="#contact" class="nav-cta btn btn-sm sm:btn-md">
-				<span class="quote-short">Request</span>
-				<span class="quote-long">Request Target Specifications</span>
+				<span class="quote-short">Contact</span>
+				<span class="quote-long">Contact Us</span>
 			</a>
 		</div>
 	</div>
